@@ -2,10 +2,10 @@
 
 import React, { Fragment, Component } from 'react'
 import Script from 'react-load-script'
-import Router from 'next/router'
 import { Flex } from 'grid-styled'
 
 import { getPackageInfo } from 'helpers'
+import { Router } from 'routes'
 
 const INPUT_COLOR = {
   IDLE: '#555',
@@ -23,7 +23,7 @@ export default class Home extends Component {
   handleSubmit (event) {
     event.preventDefault()
     const { pkgName, inputColor } = this.state
-    if (inputColor === INPUT_COLOR.SUCCESS) Router.push(`/${pkgName}`)
+    if (inputColor === INPUT_COLOR.SUCCESS) Router.pushRoute(`/${pkgName}`)
   }
 
   renderHeader () {

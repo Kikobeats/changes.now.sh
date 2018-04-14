@@ -1,6 +1,22 @@
-@import './global.css';
+@import 'normalize.css';
 @import 'hack/dist/hack.css';
 @import 'hack/dist/standard.css';
+
+::selection {
+  background-color: #ffe079;
+  color: #000;
+}
+
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+img::selection,
+b::selection {
+  background-color: #ffc533;
+}
 
 .standard {
   font-family: Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;

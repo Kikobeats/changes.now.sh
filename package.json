@@ -81,7 +81,7 @@
     "precommit": "lint-staged",
     "pretest": "npm run lint",
     "pretty": "prettier-standard index.js {core,test,bin}/**/*.js --single-quote",
-    "start": "NODE_ENV=production next start",
+    "start": "NODE_ENV=production node server.js",
     "test": "exit 0"
   },
   "private": true,

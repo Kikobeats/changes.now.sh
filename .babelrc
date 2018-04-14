@@ -10,7 +10,8 @@
         "alias": {
           "helpers": "./helpers",
           "styles": "./styles",
-          "components": "./components"
+          "components": "./components",
+          "routes": "./routes"
         },
         "cwd": "babelrc"
       }
