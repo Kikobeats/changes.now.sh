@@ -1,12 +1,5 @@
 # changes.now.sh
 
-<p align="center">
-  <br>
-  <img src="https://i.imgur.com/Mh13XWB.gif" alt="changes.now.sh">
-  <br>
-</p>
-
-![Last version](https://img.shields.io/github/tag/Kikobeats/changes.now.sh.svg?style=flat-square)
 [![Build Status](https://img.shields.io/travis/Kikobeats/changes.now.sh/master.svg?style=flat-square)](https://travis-ci.org/Kikobeats/changes.now.sh)
 [![Dependency status](https://img.shields.io/david/Kikobeats/changes.now.sh.svg?style=flat-square)](https://david-dm.org/Kikobeats/changes.now.sh)
 [![Dev Dependencies Status](https://img.shields.io/david/dev/Kikobeats/changes.now.sh.svg?style=flat-square)](https://david-dm.org/Kikobeats/changes.now.sh#info=devDependencies)
