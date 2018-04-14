@@ -70,7 +70,7 @@ export default class Home extends Component {
             <span
               class={status}
               aria-hidden='true'
-              children={status === 'idle' && 'See changelog'}
+              children={status === 'idle' && 'See changes'}
             />
           </button>
         </div>
