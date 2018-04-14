@@ -55,7 +55,6 @@
     "git-dirty": "latest",
     "husky": "latest",
     "lint-staged": "latest",
-    "now-cd": "latest",
     "prettier-standard": "latest",
     "standard": "latest",
     "standard-markdown": "latest"
