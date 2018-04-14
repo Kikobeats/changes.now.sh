@@ -3,6 +3,8 @@ import Document, { Head, Main, NextScript } from 'next/document'
 import styled, { ServerStyleSheet } from 'styled-components'
 import stylesheet from 'styles/index.scss'
 
+import { buildMeta } from 'helpers'
+
 const Particles = styled.div`
   position: fixed;
   top: 0;
@@ -30,7 +32,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>changelog.sh | See the changelog for any NPM package</title>
+          {buildMeta()}
           {this.props.styleTags}
           <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         </Head>

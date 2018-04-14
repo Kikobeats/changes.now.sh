@@ -7,7 +7,7 @@ import { Flex } from 'grid-styled'
 import Head from 'next/head'
 import 'isomorphic-unfetch'
 
-import { getPackageInfo } from 'helpers'
+import { buildMeta, getPackageInfo } from 'helpers'
 
 import { Home, Github } from 'react-feather'
 import styled from 'styled-components'
@@ -36,7 +36,6 @@ export default class Changelog extends Component {
       repository,
       homepage,
       license,
-      modified,
       changelogFilename
     } = pkgInfo
 
@@ -53,7 +52,6 @@ export default class Changelog extends Component {
       repository,
       homepage,
       license,
-      modified,
       html
     }
   }
@@ -64,7 +62,11 @@ export default class Changelog extends Component {
     return (
       <Fragment>
         <Head>
-          <title>{pkgName}</title>
+          {buildMeta({
+            title: `${pkgName} | changelog.now.sh`,
+            name: pkgName,
+            description
+          })}
         </Head>
         <header>
           <h1>{pkgName}</h1>

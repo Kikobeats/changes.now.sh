@@ -79,7 +79,7 @@ export default class Home extends Component {
             border: 0,
             color: 'white'
           }}
-        >Kiko Beats</a> (<a href='https://kikobeats.com' target='_blank'>source</a>)</p>
+        >Kiko Beats</a> (<a href='https://github.com/Kikobeats/changelog.now.sh' target='_blank'>source</a>)</p>
       </footer>
     )
   }
