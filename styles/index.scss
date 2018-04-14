@@ -18,6 +18,16 @@ b::selection {
   background-color: #ffc533;
 }
 
+.loading {
+  display: inline-block;
+  content: "&nbsp;";
+  margin: 0 .5rem;
+  animation: a .6s infinite linear;
+  border: 2px solid white;
+  border-right-color: transparent;
+  border-radius: 50%;
+}
+
 .standard {
   font-family: Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
   background-color: #000;

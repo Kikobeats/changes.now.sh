@@ -16,14 +16,17 @@ const INPUT_COLOR = {
 export default class Home extends Component {
   constructor (props) {
     super(props)
-    this.state = { pkgName: '', inputColor: INPUT_COLOR.IDLE }
+    this.state = { status: 'idle', pkgName: '', inputColor: INPUT_COLOR.IDLE }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleSubmit (event) {
     event.preventDefault()
     const { pkgName, inputColor } = this.state
-    if (inputColor === INPUT_COLOR.SUCCESS) Router.pushRoute(`/${pkgName}`)
+    if (inputColor === INPUT_COLOR.SUCCESS) {
+      this.setState({ status: 'loading' })
+      Router.pushRoute(`/${pkgName}`)
+    }
   }
 
   renderHeader () {
@@ -36,6 +39,7 @@ export default class Home extends Component {
   }
 
   renderForm () {
+    const { inputColor, status } = this.state
     return (
       <form className='form' onSubmit={this.handleSubmit}>
         <fieldset className='form-group'>
@@ -44,7 +48,7 @@ export default class Home extends Component {
             placeholder='react, debug, async...'
             className='form-control'
             ref={node => (this.input = node)}
-            style={{ borderColor: this.state.inputColor }}
+            style={{ borderColor: inputColor }}
             onChange={async event => {
               event.preventDefault()
               const pkgName = event.target.value.toLowerCase()
@@ -60,9 +64,15 @@ export default class Home extends Component {
           <button
             type='button'
             className='btn btn-info btn-block'
-            children='Submit'
             onClick={this.handleSubmit}
-          />
+            disabled={status === 'loading'}
+          >
+            <span
+              class={status}
+              aria-hidden='true'
+              children={status === 'idle' && 'See changelog'}
+            />
+          </button>
         </div>
       </form>
     )
