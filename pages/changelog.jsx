@@ -37,8 +37,7 @@ export default class Changelog extends Component {
       homepage,
       license,
       modified,
-      changelogFilename,
-      readme
+      changelogFilename
     } = pkgInfo
 
     let html = 'No changelog found!'
