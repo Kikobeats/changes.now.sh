@@ -1,0 +1,36 @@
+@import './global.css';
+@import 'hack/dist/hack.css';
+@import 'hack/dist/standard.css';
+
+.standard {
+  font-family: Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+  background-color: #000;
+  color: #ccc;
+}
+
+.standard h1,
+.standard h2,
+.standard h3,  {
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.standard li {
+  margin-bottom: 1rem;
+}
+
+.anchorjs-link {
+  border: 0;
+  color: #757575;
+
+  &:hover,
+  &:focus {
+    background-color: inherit;
+  }
+}
+
+.form-control {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
