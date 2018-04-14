@@ -63,7 +63,7 @@ export default class Changelog extends Component {
       <Fragment>
         <Head>
           {buildMeta({
-            title: `${pkgName} | changelog.now.sh`,
+            title: `${pkgName} | changes.now.sh`,
             name: pkgName,
             description
           })}

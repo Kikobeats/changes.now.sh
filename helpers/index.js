@@ -2,11 +2,11 @@ import React, { Fragment } from 'react'
 import algoliasearch from 'algoliasearch'
 
 const DEFAULT_META = {
-  name: 'changelog.now.sh',
+  name: 'changes.now.sh',
   description: 'See the changelog for any NPM package',
   image: '/static/img/logo.png',
   logo: '/static/img/logo.png',
-  url: 'https://changelog.now.sh',
+  url: 'https://changes.now.sh',
   author: 'Kikobeats'
 }
 
