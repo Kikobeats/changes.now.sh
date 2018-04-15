@@ -92,15 +92,16 @@ export default class Changelog extends Component {
         </header>
         <Markdown className='changelog' escapeHtml={false} source={html} />
         <Script
-          url='https://cdn.jsdelivr.net/npm/anchor-js@4.1.0/anchor.min.js'
-          onLoad={() => {
-            anchors.add('.changelog h1, .changelog h2, .changelog h3')
-          }}
-        />
-        <Script
           url='https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js'
           onLoad={() => {
             particlesJS.load('particles-js', '/static/particles.json')
+          }} />
+        <Script
+          url='https://cdn.jsdelivr.net/npm/anchor-js@4.1.0/anchor.min.js'
+          onLoad={() => {
+            document.addEventListener('DOMContentLoaded', function (event) {
+              anchors.add('.changelog h1, .changelog h2, .changelog h3')
+            })
           }}
         />
       </Fragment>

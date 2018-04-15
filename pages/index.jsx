@@ -68,7 +68,7 @@ export default class Home extends Component {
             disabled={status === 'loading'}
           >
             <span
-              class={status}
+              className={status}
               aria-hidden='true'
               children={status === 'idle' && 'See changes'}
             />
