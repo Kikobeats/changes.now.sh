@@ -5,8 +5,8 @@
   "version": "0.0.0",
   "main": "server.js",
   "author": {
-    "email": "josefrancisco.verdu@gmail.com",
     "name": "Kiko Beats",
+    "email": "josefrancisco.verdu@gmail.com",
     "url": "https://kikobeats.com"
   },
   "repository": {
@@ -62,16 +62,6 @@
   "engines": {
     "node": ">= 8"
   },
-  "files": [
-    "helpers",
-    "next.config.js",
-    "pages",
-    "postcss.config.js",
-    "routes.js",
-    "server.js",
-    "static",
-    "styles"
-  ],
   "scripts": {
     "build": "NODE_ENV=production next build",
     "clean": "rm -rf node_modules",
