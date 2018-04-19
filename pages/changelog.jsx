@@ -1,15 +1,16 @@
-/* global particlesJS, anchors, fetch */
+/* global particlesJS, fetch */
 
 import React, { Fragment, Component } from 'react'
 import Script from 'react-load-script'
 import Markdown from 'react-markdown'
 import { Flex } from 'grid-styled'
+import AnchorJS from 'anchor-js'
 import Head from 'next/head'
 import 'isomorphic-unfetch'
 
 import { buildMeta, getPackageInfo } from 'helpers'
 
-import { Home, Github } from 'react-feather'
+import { Home, Github as GitHub } from 'react-feather'
 import styled from 'styled-components'
 
 const IconLink = styled.a`
@@ -55,6 +56,10 @@ export default class Changelog extends Component {
       html
     }
   }
+
+  componentDidMount () {
+    new AnchorJS().add('.changelog h1, .changelog h2, .changelog h3')
+  }
   render () {
     const { html, license, description, homepage, repository } = this.props
     const { package: pkgName } = this.props.url.query
@@ -85,7 +90,7 @@ export default class Changelog extends Component {
             {repository &&
               repository.url && (
                 <IconLink target='_blank' href={repository.url}>
-                  <Github size={14} />
+                  <GitHub size={14} />
                 </IconLink>
               )}
           </Flex>
@@ -96,12 +101,6 @@ export default class Changelog extends Component {
           onLoad={() => {
             window.particlesJS && particlesJS.load('particles-js', '/static/particles.json')
           }} />
-        <Script
-          url='https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js'
-          onLoad={() => {
-            window.anchors && window.anchors.add('.changelog h1, .changelog h2, .changelog h3')
-          }}
-        />
       </Fragment>
     )
   }
