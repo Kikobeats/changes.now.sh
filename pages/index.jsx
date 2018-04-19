@@ -3,6 +3,7 @@
 import React, { Fragment, Component } from 'react'
 import Script from 'react-load-script'
 import { Flex } from 'grid-styled'
+import styled from 'styled-components'
 
 import { getPackageInfo } from 'helpers'
 import { Router } from 'routes'
@@ -12,6 +13,12 @@ const INPUT_COLOR = {
   SUCCESS: '#43a047',
   ERROR: '#f44336'
 }
+
+const FooterLink = styled.a`
+  font-weight: bold;
+  border: 0;
+  color: white;
+`
 
 export default class Home extends Component {
   constructor (props) {
@@ -81,15 +88,15 @@ export default class Home extends Component {
   renderFooter () {
     return (
       <footer>
-        <p>by <a
-          href='https://kikobeats.com'
-          target='_blank'
-          style={{
-            fontWeight: 'bold',
-            border: 0,
-            color: 'white'
-          }}
-        >Kiko Beats</a> (<a href='https://github.com/Kikobeats/changes.now.sh' target='_blank'>source</a>)</p>
+        <p>
+          by <FooterLink href='https://kikobeats.com' target='_blank' children='Kiko Beats' /> using{' '}
+          <FooterLink href='https://www.algolia.com' target='_blank' children='Algolia' /> (<a
+            href='https://github.com/Kikobeats/changes.now.sh'
+            target='_blank'
+          >
+            source
+          </a>)
+        </p>
       </footer>
     )
   }
@@ -109,7 +116,8 @@ export default class Home extends Component {
             flexDirection='column'
             justifyContent='center'
             alignItems='center'
-            style={{ flex: '1', textAlign: 'center' }}>
+            style={{ flex: '1', textAlign: 'center' }}
+          >
             {this.renderHeader()}
             {this.renderForm()}
           </Flex>
