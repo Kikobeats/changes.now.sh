@@ -5,7 +5,7 @@ const DEFAULT_META = {
   name: 'changes.now.sh',
   description: 'See the changelog for any NPM package',
   image: '/static/img/logo.png',
-  logo: '/static/img/logo.png',
+  logo: '/static/img/banner.png',
   url: 'https://changes.now.sh',
   author: 'Kikobeats'
 }

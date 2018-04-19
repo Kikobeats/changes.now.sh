@@ -66,6 +66,7 @@
   "scripts": {
     "build": "NODE_ENV=production next build",
     "clean": "rm -rf node_modules",
+    "deploy": "now -e NODE_ENV=production --public && now alias && now rm changes --safe --yes",
     "dev": "NODE_ENV=development node server.js",
     "lint": "standard-markdown && standard",
     "precommit": "lint-staged",
