@@ -34,5 +34,7 @@ module.exports = {
       }
     )
     return config
-  }
+  },
+
+  useFileSystemPublicRoutes: false
 }
