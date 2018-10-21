@@ -33,3 +33,4 @@ coverage
 # Other
 ############################
 .next
+.envrc
