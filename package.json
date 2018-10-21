@@ -59,9 +59,11 @@
     "git-dirty": "latest",
     "husky": "latest",
     "lint-staged": "latest",
+    "npm-check-updates": "latest",
     "prettier-standard": "latest",
     "standard": "11",
-    "standard-markdown": "latest"
+    "standard-markdown": "latest",
+    "standard-version": "latest"
   },
   "engines": {
     "node": ">= 8"
