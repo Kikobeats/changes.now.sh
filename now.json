@@ -1,4 +1,5 @@
 {
   "name": "changes",
-  "alias": "changes.now.sh"
+  "alias": "changes.now.sh",
+  "public": true
 }
