@@ -1,5 +1,10 @@
 {
   "name": "changes",
   "alias": "changes.now.sh",
-  "public": true
+  "public": true,
+  "env": {
+    "ALGOLIA_INDEX_NAME": "@algolia_index_name",
+    "ALGOLIA_APP_ID": "@algolia_app_id",
+    "ALGOLIA_API_KEY": "@algolia_api_key"
+  }
 }
