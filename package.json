@@ -2,13 +2,19 @@
   "name": "changes.now.sh",
   "description": "See the changelog for any NPM package",
   "homepage": "https://documentup.com/Kikobeats/changes.now.sh",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "main": "server.js",
   "author": {
-    "name": "Kiko Beats",
     "email": "josefrancisco.verdu@gmail.com",
+    "name": "Kiko Beats",
     "url": "https://kikobeats.com"
   },
+  "contributors": [
+    {
+      "name": "Siddharth Kshetrapal",
+      "email": "siddharth.kshetrapal@gmail.com"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kikobeats/changes.now.sh.git"
@@ -23,19 +29,19 @@
   ],
   "dependencies": {
     "algoliasearch": "~3.30.0",
-    "anchor-js": "~4.1.0",
+    "anchor-js": "~4.1.1",
     "autoprefixer": "~9.2.1",
     "babel-plugin-inline-dotenv": "~1.1.2",
     "babel-plugin-module-resolver": "~3.1.1",
     "babel-plugin-styled-components": "~1.8.0",
     "babel-plugin-wrap-in-js": "~1.1.1",
     "cssnano": "~4.1.5",
-    "glob": "~7.1.2",
+    "glob": "~7.1.3",
     "grid-styled": "~5.0.2",
     "hack": "~0.8.1",
     "isomorphic-unfetch": "~3.0.0",
     "next": "~7.0.2",
-    "next-routes": "~1.4.1",
+    "next-routes": "~1.4.2",
     "node-sass": "~4.9.4",
     "normalize.css": "~8.0.0",
     "postcss-easy-import": "~3.0.0",
@@ -44,20 +50,26 @@
     "raw-loader": "~0.5.1",
     "react": "~16.5.2",
     "react-dom": "~16.5.2",
-    "react-feather": "~1.1.0",
+    "react-feather": "~1.1.4",
     "react-load-script": "0.0.6",
     "react-markdown": "~4.0.3",
     "sass-loader": "~7.1.0",
     "styled-components": "~4.0.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "conventional-github-releaser": "latest",
     "finepack": "latest",
+    "git-authors-cli": "latest",
     "git-dirty": "latest",
     "husky": "latest",
     "lint-staged": "latest",
+    "npm-check-updates": "latest",
     "prettier-standard": "latest",
-    "standard": "latest",
-    "standard-markdown": "latest"
+    "standard": "11",
+    "standard-markdown": "latest",
+    "standard-version": "latest"
   },
   "engines": {
     "node": ">= 8"
@@ -68,26 +80,51 @@
     "deploy": "now -e NODE_ENV=production --public && now alias && now rm changes --safe --yes",
     "dev": "NODE_ENV=development node server.js",
     "lint": "standard-markdown && standard",
+    "postrelease": "npm run release:tags && npm run release:github",
     "precommit": "lint-staged",
+    "prerelease": "npm run update:check && git-authors-cli",
     "pretest": "npm run lint",
     "pretty": "prettier-standard index.js {core,test,bin}/**/*.js --single-quote",
+    "release": "git add package.json && standard-version -a",
+    "release:github": "conventional-github-releaser -p angular",
+    "release:tags": "git push --follow-tags origin master",
     "start": "NODE_ENV=production node server.js",
-    "test": "exit 0"
+    "test": "exit 0",
+    "update": "ncu -a",
+    "update:check": "ncu -- --error-level 2"
   },
   "private": true,
   "license": "MIT",
-  "lint-staged": {
-    "package.json": [
-      "finepack",
-      "git add"
-    ],
-    "*.js": [
-      "prettier-standard",
-      "git add"
-    ],
-    "*.md": [
-      "standard-markdown",
-      "git add"
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "package.json": [
+        "finepack",
+        "git add"
+      ],
+      "*.js": [
+        "prettier-standard",
+        "git add"
+      ],
+      "*.md": [
+        "standard-markdown",
+        "git add"
+      ]
+    }
+  },
+  "standard-version": {
+    "scripts": {
+      "prechangelog": "git-authors-cli"
+    }
   }
 }

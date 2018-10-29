@@ -10,7 +10,7 @@ import 'isomorphic-unfetch'
 
 import { buildMeta, getPackageInfo } from 'helpers'
 
-import { Home, Github as GitHub } from 'react-feather'
+import { Home, GitHub } from 'react-feather'
 import styled from 'styled-components'
 
 const IconLink = styled.a`
@@ -75,32 +75,41 @@ export default class Changelog extends Component {
         </Head>
         <header>
           <h1>{pkgName}</h1>
-          <h3 style={{ marginTop: '2rem', marginBottom: '1rem', lineHeight: '1.65' }}>
+          <h3
+            style={{
+              marginTop: '2rem',
+              marginBottom: '1rem',
+              lineHeight: '1.65'
+            }}
+          >
             {description}
           </h3>
           <Flex alignItems='baseline' style={{ color: '#757575' }}>
-            {license && <span style={{ marginRight: '8px', fontSize: '14px' }}>{license}</span>}
+            {license &&
+              <span style={{ marginRight: '8px', fontSize: '14px' }}>
+                {license}
+              </span>}
 
-            {homepage && (
+            {homepage &&
               <IconLink target='_blank' href={homepage}>
                 <Home size={14} style={{ marginRight: '8px' }} />
-              </IconLink>
-            )}
+              </IconLink>}
 
             {repository &&
-              repository.url && (
-                <IconLink target='_blank' href={repository.url}>
-                  <GitHub size={14} />
-                </IconLink>
-              )}
+              repository.url &&
+              <IconLink target='_blank' href={repository.url}>
+                <GitHub size={14} />
+              </IconLink>}
           </Flex>
         </header>
         <Markdown className='changelog' escapeHtml={false} source={html} />
         <Script
           url='https://cdn.jsdelivr.net/npm/particles.js@2/particles.min.js'
           onLoad={() => {
-            window.particlesJS && particlesJS.load('particles-js', '/static/particles.json')
-          }} />
+            window.particlesJS &&
+              particlesJS.load('particles-js', '/static/particles.json')
+          }}
+        />
       </Fragment>
     )
   }
