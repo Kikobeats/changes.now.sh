@@ -3,7 +3,6 @@
 [![Build Status](https://img.shields.io/travis/Kikobeats/changes.now.sh/master.svg?style=flat-square)](https://travis-ci.org/Kikobeats/changes.now.sh)
 [![Dependency status](https://img.shields.io/david/Kikobeats/changes.now.sh.svg?style=flat-square)](https://david-dm.org/Kikobeats/changes.now.sh)
 [![Dev Dependencies Status](https://img.shields.io/david/dev/Kikobeats/changes.now.sh.svg?style=flat-square)](https://david-dm.org/Kikobeats/changes.now.sh#info=devDependencies)
-[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/Kikobeats)
 
 > See the changelog for any NPM package.
 
