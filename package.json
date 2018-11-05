@@ -2,7 +2,7 @@
   "name": "changes.now.sh",
   "description": "See the changelog for any NPM package",
   "homepage": "https://documentup.com/Kikobeats/changes.now.sh",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "server.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
@@ -10,10 +10,7 @@
     "url": "https://kikobeats.com"
   },
   "contributors": [
-    {
-      "name": "Siddharth Kshetrapal",
-      "email": "siddharth.kshetrapal@gmail.com"
-    }
+    "Siddharth Kshetrapal <siddharth.kshetrapal@gmail.com>"
   ],
   "repository": {
     "type": "git",
