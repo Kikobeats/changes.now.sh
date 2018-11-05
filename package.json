@@ -87,7 +87,7 @@
     "pretty": "prettier-standard index.js {core,test,bin}/**/*.js --single-quote",
     "release": "git add package.json && standard-version -a",
     "release:github": "conventional-github-releaser -p angular",
-    "release:tags": "git push --follow-tags origin master",
+    "release:tags": "git push --follow-tags origin HEAD:master",
     "start": "NODE_ENV=production node server.js",
     "test": "exit 0",
     "update": "ncu -a",
