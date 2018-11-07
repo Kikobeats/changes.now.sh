@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.4"></a>
+## [1.0.4](https://github.com/Kikobeats/changes.now.sh/compare/v1.0.3...v1.0.4) (2018-11-07)
+
+
+### Bug Fixes
+
+* **package:** update react to version 16.6.1 ([771306c](https://github.com/Kikobeats/changes.now.sh/commit/771306c))
+* **package:** update react-dom to version 16.6.1 ([d84949a](https://github.com/Kikobeats/changes.now.sh/commit/d84949a))
+
+
+
 <a name="1.0.3"></a>
 ## [1.0.3](https://github.com/Kikobeats/changes.now.sh/compare/v1.0.1...v1.0.3) (2018-11-05)
 
