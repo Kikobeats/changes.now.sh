@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.6"></a>
+## [1.0.6](https://github.com/Kikobeats/changes.now.sh/compare/v1.0.5...v1.0.6) (2018-11-26)
+
+
+### Bug Fixes
+
+* **package:** update babel-plugin-styled-components to version 1.9.0 ([903e346](https://github.com/Kikobeats/changes.now.sh/commit/903e346))
+
+
+
 <a name="1.0.5"></a>
 ## [1.0.5](https://github.com/Kikobeats/changes.now.sh/compare/v1.0.4...v1.0.5) (2018-11-15)
 
