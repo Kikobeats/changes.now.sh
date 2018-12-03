@@ -1,3 +1,7 @@
-const routes = (module.exports = require('next-routes')())
+'use strict'
 
-routes.add('/', 'index').add('/:package', 'changelog')
+const routes = require('next-routes')
+
+module.exports = routes()
+  .add('/', 'index')
+  .add('/:package', 'changelog')

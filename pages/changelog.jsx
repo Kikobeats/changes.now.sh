@@ -13,6 +13,16 @@ import { buildMeta, getPackageInfo } from 'helpers'
 import { Home, GitHub } from 'react-feather'
 import styled from 'styled-components'
 
+const Warning = styled.div`
+  position: relative;
+  padding: 16px;
+  background-color: #dbedff;
+  border: 1px solid #ff2e88;
+  border-radius: 2px;
+  color: #ff2e88;
+  background-color: #000;
+`
+
 const IconLink = styled.a`
   position: relative;
   top: 1px;
@@ -29,26 +39,32 @@ const IconLink = styled.a`
 
 export default class Changelog extends Component {
   static async getInitialProps ({ query }) {
+    console.log('changelog!')
     const pkgInfo = await getPackageInfo(query.package)
 
     const {
-      version,
+      changelogFilename,
       description,
-      repository,
       homepage,
       license,
-      changelogFilename
+      readme,
+      repository,
+      version
     } = pkgInfo
 
-    let html = 'No changelog found!'
+    const hasChangelog = changelogFilename != null
+    let html
 
-    if (changelogFilename) {
+    if (hasChangelog) {
       const res = await fetch(changelogFilename)
       html = await res.text()
+    } else {
+      html = readme
     }
 
     return {
       version,
+      hasChangelog,
       description,
       repository,
       homepage,
@@ -61,7 +77,14 @@ export default class Changelog extends Component {
     new AnchorJS().add('.changelog h1, .changelog h2, .changelog h3')
   }
   render () {
-    const { html, license, description, homepage, repository } = this.props
+    const {
+      hasChangelog,
+      html,
+      license,
+      description,
+      homepage,
+      repository
+    } = this.props
     const { package: pkgName } = this.props.url.query
 
     return (
@@ -73,6 +96,11 @@ export default class Changelog extends Component {
             description
           })}
         </Head>
+        {!hasChangelog && (
+          <div style={{ marginTop: '2rem' }}>
+            <Warning>Not changelog found :(</Warning>
+          </div>
+        )}
         <header>
           <h1>{pkgName}</h1>
           <h3
@@ -85,21 +113,23 @@ export default class Changelog extends Component {
             {description}
           </h3>
           <Flex alignItems='baseline' style={{ color: '#757575' }}>
-            {license &&
+            {license && (
               <span style={{ marginRight: '8px', fontSize: '14px' }}>
                 {license}
-              </span>}
+              </span>
+            )}
 
-            {homepage &&
+            {homepage && (
               <IconLink target='_blank' href={homepage}>
                 <Home size={14} style={{ marginRight: '8px' }} />
-              </IconLink>}
+              </IconLink>
+            )}
 
-            {repository &&
-              repository.url &&
+            {repository && repository.url && (
               <IconLink target='_blank' href={repository.url}>
                 <GitHub size={14} />
-              </IconLink>}
+              </IconLink>
+            )}
           </Flex>
         </header>
         <Markdown className='changelog' escapeHtml={false} source={html} />

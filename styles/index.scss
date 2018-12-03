@@ -18,6 +18,20 @@ b::selection {
   background-color: #ffc533;
 }
 
+.standard pre {
+  color: #999;
+  background: #000;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(51, 51, 51);
+  border-image: initial;
+  overflow-x: auto;
+  font-family: "Operator Mono", "Fira Code", "SF Mono", "Roboto Mono", Menlo, monospace;
+  padding: 30px;
+  border-radius: 2px;
+  line-height: 20px;
+}
+
 .loading {
   display: inline-block;
   content: "&nbsp;";
