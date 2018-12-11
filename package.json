@@ -44,7 +44,7 @@
     "postcss-easy-import": "~3.0.0",
     "postcss-focus": "~4.0.0",
     "postcss-loader": "~3.0.0",
-    "raw-loader": "~0.5.1",
+    "raw-loader": "~1.0.0",
     "react": "~16.6.1",
     "react-dom": "~16.6.1",
     "react-feather": "~1.1.4",
