@@ -2,7 +2,7 @@
   "name": "changes.now.sh",
   "description": "See the changelog for any NPM package",
   "homepage": "https://documentup.com/Kikobeats/changes.now.sh",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "main": "server.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
