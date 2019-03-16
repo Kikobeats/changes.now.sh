@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.11"></a>
+## [1.1.11](https://github.com/Kikobeats/changes.now.sh/compare/v1.1.10...v1.1.11) (2019-03-16)
+
+
+### Bug Fixes
+
+* **package:** update autoprefixer to version 9.5.0 ([8ab3a32](https://github.com/Kikobeats/changes.now.sh/commit/8ab3a32))
+
+
+
 <a name="1.1.10"></a>
 ## [1.1.10](https://github.com/Kikobeats/changes.now.sh/compare/v1.1.9...v1.1.10) (2019-02-11)
 
