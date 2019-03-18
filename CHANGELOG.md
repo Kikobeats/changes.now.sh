@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.12"></a>
+## [1.1.12](https://github.com/Kikobeats/changes.now.sh/compare/v1.1.11...v1.1.12) (2019-03-18)
+
+
+### Bug Fixes
+
+* **package:** update raw-loader to version 2.0.0 ([9789ac6](https://github.com/Kikobeats/changes.now.sh/commit/9789ac6))
+
+
+
 <a name="1.1.11"></a>
 ## [1.1.11](https://github.com/Kikobeats/changes.now.sh/compare/v1.1.10...v1.1.11) (2019-03-16)
 
