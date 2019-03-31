@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.14"></a>
+## [1.1.14](https://github.com/Kikobeats/changes.now.sh/compare/v1.1.13...v1.1.14) (2019-03-31)
+
+
+### Bug Fixes
+
+* **package:** update babel-plugin-inline-dotenv to version 1.3.0 ([f3494db](https://github.com/Kikobeats/changes.now.sh/commit/f3494db))
+
+
+
 <a name="1.1.13"></a>
 ## [1.1.13](https://github.com/Kikobeats/changes.now.sh/compare/v1.1.12...v1.1.13) (2019-03-24)
 
