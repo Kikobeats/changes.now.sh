@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.15](https://github.com/Kikobeats/changes.now.sh/compare/v1.1.14...v1.1.15) (2019-04-17)
+
+
+### Bug Fixes
+
+* **package:** update next to version 8.1.0 ([d52eaf0](https://github.com/Kikobeats/changes.now.sh/commit/d52eaf0))
+
+
+
 <a name="1.1.14"></a>
 ## [1.1.14](https://github.com/Kikobeats/changes.now.sh/compare/v1.1.13...v1.1.14) (2019-03-31)
 
