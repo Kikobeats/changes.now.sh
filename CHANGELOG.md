@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.17](https://github.com/Kikobeats/changes.now.sh/compare/v1.1.16...v1.1.17) (2019-04-27)
+
+
+### Bug Fixes
+
+* **package:** update node-sass to version 4.12.0 ([b047d94](https://github.com/Kikobeats/changes.now.sh/commit/b047d94))
+
+
+
 ## [1.1.16](https://github.com/Kikobeats/changes.now.sh/compare/v1.1.15...v1.1.16) (2019-04-18)
 
 
