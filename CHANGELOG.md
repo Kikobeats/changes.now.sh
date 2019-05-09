@@ -1,6 +1,15 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [1.1.18](https://github.com/Kikobeats/changes.now.sh/compare/v1.1.17...v1.1.18) (2019-05-09)
+
+
+### Bug Fixes
+
+* **package:** update algoliasearch to version 3.33.0 ([38c9dfb](https://github.com/Kikobeats/changes.now.sh/commit/38c9dfb))
+
+
 
 ## [1.1.17](https://github.com/Kikobeats/changes.now.sh/compare/v1.1.16...v1.1.17) (2019-04-27)
 
