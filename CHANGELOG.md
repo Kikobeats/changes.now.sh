@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.21](https://github.com/Kikobeats/changes.now.sh/compare/v1.1.20...v1.1.21) (2019-06-10)
+
+
+### Bug Fixes
+
+* **package:** update styled-components to version 4.3.0 ([3a0d959](https://github.com/Kikobeats/changes.now.sh/commit/3a0d959))
+
+
+
 ### [1.1.20](https://github.com/Kikobeats/changes.now.sh/compare/v1.1.19...v1.1.20) (2019-06-05)
 
 
