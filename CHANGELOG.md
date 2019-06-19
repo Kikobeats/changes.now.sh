@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.22](https://github.com/Kikobeats/changes.now.sh/compare/v1.1.21...v1.1.22) (2019-06-19)
+
+
+### Build System
+
+* update travis ([feacde6](https://github.com/Kikobeats/changes.now.sh/commit/feacde6))
+
+
+
 ### [1.1.21](https://github.com/Kikobeats/changes.now.sh/compare/v1.1.20...v1.1.21) (2019-06-10)
 
 
