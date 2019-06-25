@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.23](https://github.com/Kikobeats/changes.now.sh/compare/v1.1.22...v1.1.23) (2019-06-25)
+
+
+### Bug Fixes
+
+* **package:** update react-markdown to version 4.1.0 ([22f77f3](https://github.com/Kikobeats/changes.now.sh/commit/22f77f3))
+
+
+
 ### [1.1.22](https://github.com/Kikobeats/changes.now.sh/compare/v1.1.21...v1.1.22) (2019-06-19)
 
 
